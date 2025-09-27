@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Running terraform fmt -recursive..."
+terraform fmt -recursive
+
+CHANGES=$(git diff --name-only)
+if [[ -n "$CHANGES" ]]; then
+  echo "Files were reformatted by terraform fmt. Please re-stage changes."
+  echo "$CHANGES"
+  exit 1
+fi
+
+echo "Pre-commit checks passed."
+

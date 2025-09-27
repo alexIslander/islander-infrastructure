@@ -1,0 +1,12 @@
+# Production - fill values in TF Cloud or local tfvars
+tenancy_ocid     = "ocid1.tenancy.oc1..<REPLACE_ME>"
+user_ocid        = "ocid1.user.oc1..<REPLACE_ME>"
+fingerprint      = "<REPLACE_ME>"
+private_key_path = "~/.oci/oci_api_key.pem"
+region           = "us-ashburn-1"
+compartment_id   = "ocid1.compartment.oc1..<REPLACE_ME>"
+ssh_public_key   = "<PASTE_YOUR_PUBLIC_KEY_CONTENT>"
+instance_ocpus     = 2
+instance_memory_gb = 12
+volume_size_gbs    = 100
+
